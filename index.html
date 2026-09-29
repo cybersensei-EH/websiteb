@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Sensei | Master the Hack</title>
-  <meta name="description" content="Cyber Sensei — penetration testing, platform beta testing, corporate training, bootcamp instruction, mentorship, and cybersecurity walkthroughs.">
+  <meta name="description" content="Cyber Sensei — penetration testing, platform beta testing, corporate training, mentorship, community hacknights, and public walkthroughs.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,10 @@
       <nav class="main-nav" id="mainNav" aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#work">What We Do</a></li>
-          <li><a href="#walkthroughs">Walkthroughs</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#hacknights">Hacknights</a></li>
+          <li><a href="#sessions">Sessions</a></li>
+          <li><a href="#writeups">Writeups</a></li>
           <li><a href="#founders">Founders</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -44,6 +46,7 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-atmosphere" aria-hidden="true">
         <div class="hero-mesh"></div>
@@ -55,13 +58,7 @@
       </div>
 
       <div class="shell hero-stage">
-        <img
-          src="assets/logo.png"
-          alt="Cyber Sensei"
-          class="hero-logo"
-          width="520"
-          height="280"
-        >
+        <img src="assets/logo.png" alt="Cyber Sensei" class="hero-logo" width="520" height="280">
 
         <h1 class="hero-headline">
           Test it.<br>
@@ -70,18 +67,13 @@
         </h1>
 
         <p class="hero-lede">
-          Penetration testing, platform beta testing, corporate training, and
-          mentorship — plus the walkthroughs that put our craft in public.
+          Penetration testing, platform beta testing, corporate training, mentorship —
+          and community nights that run until sunrise.
         </p>
 
         <div class="hero-cta">
-          <a href="#work" class="btn btn-solid">See What We Do</a>
-          <a
-            href="https://www.youtube.com/@cybersensei-EH"
-            class="btn btn-ghost"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Watch on YouTube</a>
+          <a href="#hacknights" class="btn btn-solid">See Hacknights</a>
+          <a href="#work" class="btn btn-ghost">What We Do</a>
         </div>
       </div>
 
@@ -93,23 +85,21 @@
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
         <span>Penetration Testing</span><i></i>
-        <span>Web App Security</span><i></i>
+        <span>Hacknights</span><i></i>
         <span>Platform Beta Testing</span><i></i>
         <span>Corporate Training</span><i></i>
         <span>Bootcamp Instruction</span><i></i>
         <span>Mentorship</span><i></i>
-        <span>Walkthroughs</span><i></i>
-        <span>Red Team</span><i></i>
-        <span>Blue Team</span><i></i>
+        <span>CTF Walkthroughs</span><i></i>
+        <span>Community Sessions</span><i></i>
         <span>Penetration Testing</span><i></i>
-        <span>Web App Security</span><i></i>
+        <span>Hacknights</span><i></i>
         <span>Platform Beta Testing</span><i></i>
         <span>Corporate Training</span><i></i>
         <span>Bootcamp Instruction</span><i></i>
         <span>Mentorship</span><i></i>
-        <span>Walkthroughs</span><i></i>
-        <span>Red Team</span><i></i>
-        <span>Blue Team</span><i></i>
+        <span>CTF Walkthroughs</span><i></i>
+        <span>Community Sessions</span><i></i>
       </div>
     </div>
 
@@ -118,24 +108,24 @@
       <div class="shell about-layout">
         <div class="about-intro" data-reveal>
           <p class="eyebrow"><span class="eyebrow-code">01</span> About</p>
-          <h2>Operators who test, teach, and ship security work.</h2>
+          <h2>Operators who test, teach, and show up in the room.</h2>
         </div>
-
         <div class="about-body" data-reveal>
           <p>
-            Cyber Sensei is a cybersecurity practice built by people who live in
-            the work — breaking applications, stress-testing platforms, training
-            teams, and mentoring the next wave of practitioners.
+            Cyber Sensei is a cybersecurity practice that lives in the work —
+            breaking applications, stress-testing platforms, training teams, and
+            mentoring people breaking into the field.
           </p>
           <p>
-            We move between offense and defense: finding weaknesses, explaining
-            them clearly, and helping people and organizations get stronger.
+            We also build in public: Medium writeups, YouTube sessions, and
+            all-night hacknights with communities that want the real thing —
+            not a slide deck that ends at 5pm.
           </p>
-
           <ul class="about-pills">
-            <li>Offensive &amp; defensive security</li>
+            <li>Offense &amp; defense</li>
             <li>Hands-on delivery</li>
-            <li>Built in public on YouTube</li>
+            <li>Community collaborations</li>
+            <li>Public writeups</li>
           </ul>
         </div>
       </div>
@@ -148,8 +138,8 @@
           <p class="eyebrow"><span class="eyebrow-code">02</span> What we do</p>
           <h2>The work on the ground.</h2>
           <p class="section-lede">
-            Not a single lane — testing, training, teaching, and guiding people
-            into the field.
+            Testing, training, teaching, and guiding people into cybersecurity —
+            plus the community events where delivery gets measured overnight.
           </p>
         </header>
 
@@ -159,146 +149,248 @@
             <h3>Penetration testing</h3>
             <p>Web applications and broader attack surfaces — find what breaks before someone else does.</p>
           </article>
-
           <article class="work-item" data-reveal>
             <span class="work-index">02</span>
             <h3>Platform beta testing</h3>
             <p>Security-minded beta testing for platforms before they go live to real users.</p>
           </article>
-
           <article class="work-item" data-reveal>
             <span class="work-index">03</span>
             <h3>Corporate training</h3>
             <p>Team workshops that raise threat awareness, secure practices, and response readiness.</p>
           </article>
-
           <article class="work-item" data-reveal>
             <span class="work-index">04</span>
             <h3>Bootcamp instruction</h3>
             <p>Hands-on instructors for cybersecurity bootcamps — curriculum that sticks in the lab.</p>
           </article>
-
           <article class="work-item" data-reveal>
             <span class="work-index">05</span>
             <h3>Mentorship</h3>
-            <p>One-on-one guidance for beginners and people breaking into cybersecurity careers.</p>
+            <p>Guidance for beginners and people breaking into cybersecurity careers.</p>
           </article>
-
           <article class="work-item" data-reveal>
             <span class="work-index">06</span>
-            <h3>Walkthroughs</h3>
-            <p>Public challenge and lab walkthroughs on YouTube — learn by watching the process unfold.</p>
+            <h3>Walkthroughs &amp; writeups</h3>
+            <p>Public challenge walkthroughs on YouTube and Medium — learn by watching the process.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PATHS: who we serve -->
-    <section class="paths" id="paths">
+    <!-- HACKNIGHTS -->
+    <section class="hacknights" id="hacknights">
       <div class="shell">
         <header class="section-head" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-code">03</span> Who we serve</p>
-          <h2>Built for teams and individuals.</h2>
-        </header>
-
-        <div class="paths-split">
-          <article class="path path--org" data-reveal>
-            <div class="path-meta">
-              <span class="path-tag">Organizations</span>
-            </div>
-            <h3>Secure what you ship.</h3>
-            <p>Engage us for testing and training when your product or people need a sharper security edge.</p>
-            <ul class="path-list">
-              <li>Web application penetration testing</li>
-              <li>Platform beta / security validation</li>
-              <li>Corporate security workshops</li>
-              <li>Bootcamp &amp; program instruction</li>
-            </ul>
-          </article>
-
-          <article class="path path--people" data-reveal>
-            <div class="path-meta">
-              <span class="path-tag">Individuals</span>
-            </div>
-            <h3>Break into the field — with a guide.</h3>
-            <p>Mentorship and walkthroughs for beginners and career-switchers who want practical direction.</p>
-            <ul class="path-list">
-              <li>Beginner mentorship paths</li>
-              <li>Career-break-in coaching</li>
-              <li>YouTube walkthrough library</li>
-              <li>Hands-on skill building</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- WALKTHROUGHS / YOUTUBE -->
-    <section class="walkthroughs" id="walkthroughs">
-      <div class="shell">
-        <header class="section-head" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-code">04</span> Walkthroughs</p>
-          <h2>Watch how the work gets done.</h2>
+          <p class="eyebrow"><span class="eyebrow-code">03</span> Hacknights</p>
+          <h2>We don’t just talk security. We run the night.</h2>
           <p class="section-lede">
-            Our YouTube channel is packed with sessions and challenge walkthroughs —
-            the public face of how we teach and operate.
+            Twice with the MMU Tech community — Cyber Sensei sponsored and delivered
+            full hacknights: CTF platform, challenges, mentorship on the floor,
+            walkthroughs at dawn, and guest industry gurus.
           </p>
         </header>
 
-        <div class="walk-stage" data-reveal>
-          <div class="walk-screen">
-            <div class="walk-chrome">
-              <span></span><span></span><span></span>
-              <code>youtube.com/@cybersensei-EH</code>
-            </div>
-            <div class="walk-body">
-              <p class="walk-kicker">Cyber Sensei on YouTube</p>
-              <h3>Sessions &amp; challenge walkthroughs</h3>
-              <p>
-                Step-by-step labs and write-ups — pause, practice, and come back
-                whenever you need the process again.
-              </p>
-              <a
-                href="https://www.youtube.com/@cybersensei-EH"
-                class="btn btn-solid"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open YouTube Channel
-              </a>
+        <div class="hn-stats" data-reveal>
+          <div class="hn-stat">
+            <strong>2×</strong>
+            <span>Hacknights sponsored</span>
+          </div>
+          <div class="hn-stat">
+            <strong>60+</strong>
+            <span>Students in Hacknight 1.0</span>
+          </div>
+          <div class="hn-stat">
+            <strong>9pm→5:30am</strong>
+            <span>Full delivery overnight</span>
+          </div>
+          <div class="hn-stat">
+            <strong>Live</strong>
+            <span>CTF + dawn walkthroughs</span>
+          </div>
+        </div>
+
+        <div class="hn-feature" data-reveal>
+          <div class="hn-feature-media">
+            <img src="assets/hacknight/in-action.jpg" alt="Students competing during Hacknight" loading="lazy">
+            <div class="hn-feature-overlay">
+              <span class="mono">HACKNIGHT 1.0</span>
+              <p>MMU · Feb 6–7, 2026</p>
             </div>
           </div>
+          <div class="hn-feature-copy">
+            <h3>Hacknight 1.0 — first of its kind at MMU</h3>
+            <p>
+              Built with the MMU CIT club cybersecurity track. Beginner-friendly CTFs
+              across web exploitation, stego, network forensics, crypto, OSINT, and misc —
+              hosted on Cyber Sensei’s own platform.
+            </p>
+            <p>
+              Leads stayed on the floor all night: mixing gurus with beginners,
+              dropping tool tips, freezing the scoreboard at 4:30am, then running
+              creator walkthroughs until sunrise. Writeups went out on Medium.
+              Merch and VIP memberships for the winners.
+            </p>
+            <ul class="hn-checklist">
+              <li>Custom CTF platform + challenge authoring</li>
+              <li>Balanced teams so beginners learn mid-competition</li>
+              <li>Refreshments, awards, and photo-finish at dawn</li>
+              <li>Immediate walkthroughs — not “figure it out later”</li>
+            </ul>
+          </div>
+        </div>
 
-          <aside class="walk-rail">
-            <article class="walk-item">
-              <span class="mono">01</span>
-              <div>
-                <h4>Challenge walkthroughs</h4>
-                <p>Box-by-box and lab deep dives.</p>
-              </div>
-            </article>
-            <article class="walk-item">
-              <span class="mono">02</span>
-              <div>
-                <h4>Live sessions</h4>
-                <p>Real-time teaching with the community.</p>
-              </div>
-            </article>
-            <article class="walk-item">
-              <span class="mono">03</span>
-              <div>
-                <h4>Tooling &amp; tradecraft</h4>
-                <p>How the testing actually gets done.</p>
-              </div>
-            </article>
-            <article class="walk-item">
-              <span class="mono">04</span>
-              <div>
-                <h4>Career-minded content</h4>
-                <p>Direction for people entering the field.</p>
-              </div>
-            </article>
-          </aside>
+        <div class="hn-gallery" data-reveal>
+          <figure>
+            <img src="assets/hacknight/merch-winners.jpg" alt="Hacknight winners with Cyber Sensei merch" loading="lazy">
+            <figcaption>Winners + Cyber Sensei merch</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hacknight/teaching-session.jpg" alt="Live privilege escalation walkthrough" loading="lazy">
+            <figcaption>Live walkthrough delivery</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hacknight/winners.jpg" alt="Winning team at Hacknight" loading="lazy">
+            <figcaption>Winning squad</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hacknight/crew.jpg" alt="Cyber Sensei crew after Hacknight" loading="lazy">
+            <figcaption>Crew after the night</figcaption>
+          </figure>
+        </div>
+
+        <article class="hn-guest" data-reveal>
+          <div class="hn-guest-media">
+            <img src="assets/hacknight/steiner254.jpg" alt="steiner254 presenting at Hacknight 2" loading="lazy">
+          </div>
+          <div class="hn-guest-copy">
+            <p class="eyebrow"><span class="eyebrow-code">GUEST</span> Hacknight 2.0</p>
+            <h3>We bring industry gurus into the room.</h3>
+            <p>
+              For Hacknight 2, we brought in <strong>steiner254</strong> — a top
+              bug-bounty hunter in the region — to share real tradecraft with students.
+              That is the standard: not only challenges, but people who ship results
+              in the wild.
+            </p>
+            <p class="hn-guest-note">
+              More hacknight stories and sessions will land here as we keep running them.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SESSIONS / COLLABORATIONS -->
+    <section class="sessions" id="sessions">
+      <div class="shell">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-code">04</span> Sessions</p>
+          <h2>Collaborations with communities that build.</h2>
+          <p class="section-lede">
+            Walkthrough Thursdays, topic deep-dives, and live teaching with partners
+            across the ecosystem. More sessions coming.
+          </p>
+        </header>
+
+        <div class="partners" data-reveal>
+          <span class="partners-label">Partners</span>
+          <ul class="partners-list">
+            <li>MMU Tech Community</li>
+            <li>CTFROOM</li>
+            <li>Cyber Chief Circle</li>
+          </ul>
+        </div>
+
+        <div class="session-grid">
+          <article class="session-card" data-reveal>
+            <img src="assets/events/ctfroom-hospital.jpg" alt="CTFROOM Walkthrough Thursday — The Hospital" loading="lazy">
+            <div class="session-card-body">
+              <span class="session-partner">CTFROOM</span>
+              <h3>Walkthrough Thursday — The Hospital</h3>
+              <p>Vault walkthrough online session with speaker Reuben.</p>
+              <span class="session-meta">Apr 16 · Online</span>
+            </div>
+          </article>
+
+          <article class="session-card" data-reveal>
+            <img src="assets/events/ctfroom-habemus.jpg" alt="CTFROOM Walkthrough Thursday — Habemus Hackum" loading="lazy">
+            <div class="session-card-body">
+              <span class="session-partner">CTFROOM</span>
+              <h3>Walkthrough Thursday — Habemus Hackum</h3>
+              <p>Vault walkthrough online session with speaker Reuben.</p>
+              <span class="session-meta">May 14 · Online</span>
+            </div>
+          </article>
+
+          <article class="session-card" data-reveal>
+            <img src="assets/events/cyber-chief-ssrf.jpg" alt="Cyber Chief Circle SSRF Attacks session with Samuel Gachora" loading="lazy">
+            <div class="session-card-body">
+              <span class="session-partner">Cyber Chief Circle</span>
+              <h3>SSRF Attacks</h3>
+              <p>Deep-dive session with co-founder Samuel Gachora.</p>
+              <span class="session-meta">Aug 19 · Google Meet</span>
+            </div>
+          </article>
+
+          <article class="session-card session-card--more" data-reveal>
+            <div class="session-card-body">
+              <span class="session-partner">MMU Tech Community</span>
+              <h3>Hacknights &amp; campus sessions</h3>
+              <p>
+                Sponsored hacknights plus ongoing cybersecurity track collaboration —
+                CTFs, walkthroughs, and floor mentorship.
+              </p>
+              <a href="#hacknights" class="text-link">View hacknights →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WRITEUPS / MEDIUM -->
+    <section class="writeups" id="writeups">
+      <div class="shell writeups-layout">
+        <div class="writeups-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-code">05</span> Writeups</p>
+          <h2>Walkthroughs on Medium.</h2>
+          <p class="section-lede">
+            Challenge writeups from labs and vaults we have actually broken —
+            the same craft we teach live, published for anyone to revisit.
+          </p>
+          <a
+            href="https://medium.com/@cybersenseieh"
+            class="btn btn-solid"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Open Medium @cybersenseieh</a>
+        </div>
+
+        <div class="writeups-panel" data-reveal>
+          <article class="writeup-item">
+            <span class="mono">01</span>
+            <div>
+              <h4>CTF &amp; vault walkthroughs</h4>
+              <p>Step-by-step paths from foothold to flag.</p>
+            </div>
+          </article>
+          <article class="writeup-item">
+            <span class="mono">02</span>
+            <div>
+              <h4>Hacknight challenge writeups</h4>
+              <p>Official writeups released after competitions end.</p>
+            </div>
+          </article>
+          <article class="writeup-item">
+            <span class="mono">03</span>
+            <div>
+              <h4>Technique deep-dives</h4>
+              <p>Web, privilege escalation, and more — written for operators.</p>
+            </div>
+          </article>
+          <p class="writeups-footnote">
+            YouTube video embeds coming soon — for now, watch live sessions on
+            <a href="https://www.youtube.com/@cybersensei-EH" target="_blank" rel="noopener noreferrer">@cybersensei-EH</a>.
+          </p>
         </div>
       </div>
     </section>
@@ -307,86 +399,62 @@
     <section class="why" id="why">
       <div class="shell why-layout">
         <div class="why-intro" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-code">05</span> Why us</p>
-          <h2>Practitioners first. Teachers second. Always hands-on.</h2>
+          <p class="eyebrow"><span class="eyebrow-code">06</span> Why us</p>
+          <h2>Dedication you can measure in hours and outcomes.</h2>
         </div>
         <ol class="why-list">
           <li data-reveal>
-            <strong>Real engagements</strong>
-            <span>Testing and training grounded in how systems fail in the wild.</span>
+            <strong>We stay until the walkthrough</strong>
+            <span>Hacknights end with creator-led reviews — not a silent scoreboard.</span>
           </li>
           <li data-reveal>
-            <strong>Offense informs defense</strong>
-            <span>We break things carefully so teams can harden with intent.</span>
+            <strong>Platform + challenges + mentorship</strong>
+            <span>We host the CTF, write the boxes, and coach on the floor.</span>
           </li>
           <li data-reveal>
-            <strong>Clear mentorship</strong>
-            <span>Beginners and career-switchers get a path, not noise.</span>
+            <strong>Industry voices in the room</strong>
+            <span>Guest gurus like steiner254 bring bug-bounty reality to students.</span>
           </li>
           <li data-reveal>
             <strong>Public proof of craft</strong>
-            <span>Walkthroughs on YouTube show how we think under the hood.</span>
+            <span>Medium writeups and community sessions show how we think under the hood.</span>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- FOUNDERS — compact -->
+    <!-- FOUNDERS -->
     <section class="founders" id="founders">
       <div class="shell">
         <header class="section-head section-head--center" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-code">06</span> Founders</p>
+          <p class="eyebrow"><span class="eyebrow-code">07</span> Founders</p>
           <h2>Meet the founders.</h2>
         </header>
 
         <div class="founders-row">
           <article class="founder" data-reveal>
-            <img
-              class="founder-photo"
-              src="assets/founder-samuel.jpg"
-              alt="Samuel Gachora"
-              loading="lazy"
-              width="112"
-              height="112"
-            >
+            <img class="founder-photo" src="assets/founder-samuel.jpg" alt="Samuel Gachora" loading="lazy" width="112" height="112">
             <div class="founder-copy">
               <h3>Samuel Gachora</h3>
               <p class="founder-role">Co-Founder</p>
               <p>
-                Drives Cyber Sensei’s vision and strategy — practical security
-                work and accessible training without watering down the craft.
+                Drives Cyber Sensei’s vision and strategy — practical security work,
+                community sessions, and training that stays sharp.
               </p>
-              <a
-                href="https://www.linkedin.com/in/samuel-gachora-5426922b9/"
-                class="text-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >LinkedIn →</a>
+              <a href="https://www.linkedin.com/in/samuel-gachora-5426922b9/" class="text-link" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
 
           <article class="founder" data-reveal>
-            <img
-              class="founder-photo"
-              src="assets/founder-reuben.jpg"
-              alt="Reuben Kanyoko"
-              loading="lazy"
-              width="112"
-              height="112"
-            >
+            <img class="founder-photo" src="assets/founder-reuben.jpg" alt="Reuben Kanyoko" loading="lazy" width="112" height="112">
             <div class="founder-copy">
               <h3>Reuben Kanyoko</h3>
               <p class="founder-role">Co-Founder</p>
               <p>
-                Leads training programs and community work — workshops, sessions,
-                and hands-on instruction grounded in practice.
+                Leads programs, hacknights, and walkthrough sessions — workshops and
+                floor instruction grounded in practice.
               </p>
-              <a
-                href="https://www.linkedin.com/in/reuben-kanyoko-wahome/"
-                class="text-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >LinkedIn →</a>
+              <a href="https://www.linkedin.com/in/reuben-kanyoko-wahome/" class="text-link" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
         </div>
@@ -397,11 +465,11 @@
     <section class="contact" id="contact">
       <div class="shell contact-layout">
         <div class="contact-copy" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-code">07</span> Contact</p>
+          <p class="eyebrow"><span class="eyebrow-code">08</span> Contact</p>
           <h2>Ready to work together?</h2>
           <p class="section-lede">
-            Testing, training, mentorship, bootcamp instruction, or a partnership —
-            send a note and we will get back to you.
+            Testing, training, mentorship, a community session, or the next hacknight —
+            send a note.
           </p>
 
           <ul class="contact-meta">
@@ -425,6 +493,7 @@
 
           <div class="social-row">
             <a href="https://www.youtube.com/@cybersensei-EH" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://medium.com/@cybersenseieh" target="_blank" rel="noopener noreferrer">Medium</a>
             <a href="https://www.linkedin.com/company/cybersensei-eh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://x.com/cyber_sensei_EH" target="_blank" rel="noopener noreferrer">X</a>
             <a href="https://www.instagram.com/cybersensei_eh/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -449,7 +518,8 @@
               <option>Corporate Training</option>
               <option>Bootcamp Instruction</option>
               <option>Mentorship</option>
-              <option>Walkthroughs / YouTube</option>
+              <option>Hacknight / Community Session</option>
+              <option>Writeups / Collaboration</option>
               <option>Other</option>
             </select>
           </label>
@@ -473,9 +543,10 @@
       </a>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#about">About</a>
-        <a href="#work">What We Do</a>
-        <a href="#walkthroughs">Walkthroughs</a>
-        <a href="#founders">Founders</a>
+        <a href="#work">Work</a>
+        <a href="#hacknights">Hacknights</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#writeups">Writeups</a>
         <a href="#contact">Contact</a>
       </nav>
       <p class="footer-copy">
@@ -486,7 +557,6 @@
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
-
   <script src="js/script.js"></script>
 </body>
 </html>
