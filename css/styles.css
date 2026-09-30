@@ -1522,48 +1522,39 @@ body {
   transform: translateY(-2px);
 }
 
-/* Consistent portrait frame — keeps people visible */
+/* Natural framing — never crop people or posters */
+.gallery-item img,
+.gallery-item .gallery-frame img {
+  aspect-ratio: auto;
+  object-fit: unset;
+  object-position: center center;
+}
+
 .gallery-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #05070a;
+  line-height: 0;
 }
 
 .gallery-frame img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
-/* Landscape shots (scoreboard, etc.) */
-.gallery-item--landscape .gallery-frame {
-  aspect-ratio: 16 / 10;
-}
-
-.gallery-item--landscape .gallery-frame img {
-  object-position: center center;
-}
-
-/* Posters: show full flyer, no crop */
+/* Soft letterbox only for posters that need padding */
 .gallery-item--poster .gallery-frame {
-  aspect-ratio: 3 / 4;
+  padding: 0.65rem;
   display: grid;
   place-items: center;
-  padding: 0.65rem;
 }
 
 .gallery-item--poster .gallery-frame img {
-  position: static;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
+  height: auto;
 }
 
 .gallery-item figcaption {
