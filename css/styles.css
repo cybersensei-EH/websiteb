@@ -86,15 +86,17 @@ body {
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(37, 231, 234, 0.07), transparent 55%),
-    radial-gradient(ellipse 40% 30% at 0% 60%, rgba(232, 90, 74, 0.04), transparent 50%),
-    radial-gradient(ellipse 40% 30% at 100% 80%, rgba(74, 159, 216, 0.05), transparent 50%);
+    radial-gradient(ellipse 90% 55% at 50% -5%, rgba(37, 231, 234, 0.09), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 0% 40%, rgba(232, 90, 74, 0.06), transparent 55%),
+    radial-gradient(ellipse 40% 40% at 100% 70%, rgba(74, 159, 216, 0.07), transparent 50%),
+    linear-gradient(180deg, #060910 0%, #07090c 40%, #05070a 100%);
 }
 
-/* Subtle floating atmosphere — restrained, respects reduced motion */
-.float-field {
+/* Atmosphere inspired by summit / savanna / cyberpro energy —
+   hex terrain, dual glows, floating rings — in Cyber Sensei cyan */
+.atmosphere {
   pointer-events: none;
   position: fixed;
   inset: 0;
@@ -102,66 +104,129 @@ body {
   overflow: hidden;
 }
 
-.float-orb {
+.hex-mesh {
+  position: absolute;
+  inset: -10% -5% auto;
+  height: 72vh;
+  opacity: 0.28;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0 56 64'%3E%3Cpath fill='none' stroke='%2325e7ea' stroke-opacity='0.45' stroke-width='1' d='M28 2 L52 16 V44 L28 58 L4 44 V16 Z'/%3E%3C/svg%3E");
+  background-size: 56px 64px;
+  transform: perspective(900px) rotateX(58deg) scale(1.35);
+  transform-origin: center top;
+  mask-image: linear-gradient(to bottom, black 10%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 85%);
+  animation: mesh-pulse 14s ease-in-out infinite;
+}
+
+.hex-mesh--soft {
+  opacity: 0.12;
+  top: 28%;
+  height: 55vh;
+  transform: perspective(900px) rotateX(62deg) scale(1.5) translateY(8%);
+  animation-duration: 20s;
+  animation-delay: -4s;
+  filter: blur(0.4px);
+}
+
+@keyframes mesh-pulse {
+  0%, 100% { opacity: 0.22; }
+  50% { opacity: 0.34; }
+}
+
+.glow-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.16;
-  animation: float-drift 22s ease-in-out infinite;
+  filter: blur(90px);
+  animation: blob-drift 24s ease-in-out infinite;
 }
 
-.float-orb--a {
-  width: 280px;
-  height: 280px;
-  background: var(--cyan);
+.glow-blob--cyan {
+  width: min(48vw, 520px);
+  height: min(48vw, 520px);
+  background: #25e7ea;
+  top: -8%;
+  left: 28%;
+  opacity: 0.14;
+}
+
+.glow-blob--warm {
+  width: 320px;
+  height: 320px;
+  background: #e85a4a;
   top: 18%;
-  left: -4%;
-}
-
-.float-orb--b {
-  width: 220px;
-  height: 220px;
-  background: var(--steel);
-  top: 55%;
-  right: -3%;
+  left: -6%;
+  opacity: 0.1;
   animation-duration: 28s;
   animation-delay: -6s;
 }
 
-.float-orb--c {
-  width: 180px;
-  height: 180px;
-  background: var(--signal);
-  bottom: 8%;
-  left: 35%;
-  opacity: 0.1;
+.glow-blob--steel {
+  width: 280px;
+  height: 280px;
+  background: #4a9fd8;
+  bottom: 12%;
+  right: -4%;
+  opacity: 0.12;
   animation-duration: 26s;
-  animation-delay: -12s;
+  animation-delay: -11s;
 }
 
-.float-chip {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1px solid rgba(37, 231, 234, 0.35);
-  background: rgba(37, 231, 234, 0.08);
-  animation: float-chip 18s linear infinite;
-}
-
-.float-chip--1 { top: 22%; left: 12%; animation-delay: -2s; }
-.float-chip--2 { top: 48%; right: 18%; width: 6px; height: 6px; animation-delay: -8s; animation-duration: 24s; }
-.float-chip--3 { bottom: 20%; left: 62%; width: 10px; height: 10px; animation-delay: -14s; }
-
-@keyframes float-drift {
+@keyframes blob-drift {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(24px, -30px) scale(1.08); }
+  50% { transform: translate(18px, -28px) scale(1.08); }
 }
 
-@keyframes float-chip {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0.35; }
-  50% { transform: translateY(-40px) rotate(90deg); opacity: 0.7; }
-  100% { transform: translateY(0) rotate(180deg); opacity: 0.35; }
+.hex-ring {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: 1px solid rgba(37, 231, 234, 0.22);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  background: transparent;
+  box-shadow: inset 0 0 24px rgba(37, 231, 234, 0.06);
+  animation: ring-float 18s ease-in-out infinite;
 }
+
+.hex-ring::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  border: 1px solid rgba(37, 231, 234, 0.12);
+}
+
+.hex-ring--1 { top: 28%; right: 8%; width: 120px; height: 120px; }
+.hex-ring--2 { top: 58%; left: 6%; width: 90px; height: 90px; animation-delay: -5s; animation-duration: 22s; border-color: rgba(74, 159, 216, 0.25); }
+.hex-ring--3 { bottom: 18%; right: 22%; width: 70px; height: 70px; animation-delay: -9s; opacity: 0.7; }
+
+@keyframes ring-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.55; }
+  50% { transform: translateY(-22px) rotate(8deg); opacity: 0.9; }
+}
+
+.spark {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #25e7ea;
+  box-shadow: 0 0 10px rgba(37, 231, 234, 0.8);
+  animation: spark-rise 12s linear infinite;
+}
+
+.spark--1 { left: 18%; bottom: 8%; animation-delay: 0s; }
+.spark--2 { left: 42%; bottom: 4%; animation-delay: -3s; animation-duration: 15s; }
+.spark--3 { left: 68%; bottom: 10%; animation-delay: -7s; animation-duration: 13s; }
+.spark--4 { left: 85%; bottom: 6%; animation-delay: -10s; animation-duration: 16s; }
+
+@keyframes spark-rise {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translateY(-70vh) scale(0.4); opacity: 0; }
+}
+
+/* legacy aliases if any remain */
+.float-field { display: none; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -1919,7 +1984,13 @@ body {
   }
 
   .float-orb,
-  .float-chip {
+  .float-chip,
+  .hex-mesh,
+  .glow-blob,
+  .hex-ring,
+  .spark {
     animation: none !important;
   }
+
+  .hex-mesh { opacity: 0.18; }
 }
