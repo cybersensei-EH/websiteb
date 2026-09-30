@@ -61,4 +61,21 @@
     }
     form.reset();
   });
+
+  // Lite YouTube: thumbnail facade → iframe only on click
+  document.querySelectorAll("[data-youtube-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("is-playing")) return;
+      const id = btn.getAttribute("data-youtube-id");
+      if (!id) return;
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = "YouTube video";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      btn.classList.add("is-playing");
+      btn.replaceChildren(iframe);
+    });
+  });
 })();
