@@ -79,6 +79,29 @@
     });
   });
 
+  // Wins page — sticky board counter as competitions enter view
+  const winsRailCount = document.getElementById("winsRailCount");
+  const winEntries = document.querySelectorAll(".win[data-win]");
+  if (winsRailCount && winEntries.length) {
+    document.body.classList.add("is-wins-scrolling");
+    const setWin = (n) => {
+      winsRailCount.textContent = String(n).padStart(2, "0");
+    };
+    if ("IntersectionObserver" in window) {
+      const winIo = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const n = entry.target.getAttribute("data-win");
+            if (n) setWin(n);
+          });
+        },
+        { threshold: 0.45, rootMargin: "-10% 0px -35% 0px" }
+      );
+      winEntries.forEach((el) => winIo.observe(el));
+    }
+  }
+
   // Kali terminal simulation — cybersensei-eh lab floor
   const kaliScreen = document.getElementById("kaliScreen");
   const kaliWindow = document.getElementById("kaliWindow");
