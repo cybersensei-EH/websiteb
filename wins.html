@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=wins-1">
+  <link rel="stylesheet" href="css/styles.css?v=wins-2">
 </head>
 <body class="page-wins">
 
@@ -56,19 +56,13 @@
     </div>
   </header>
 
-  <aside class="wins-rail" aria-hidden="true">
-    <span class="wins-rail-label">board</span>
-    <span class="wins-rail-count" id="winsRailCount">01</span>
-    <span class="wins-rail-total">/ 07</span>
-  </aside>
-
   <main>
     <section class="wins-hero">
-      <div class="shell">
+      <div class="shell wins-shell">
         <p class="eyebrow"><span class="eyebrow-code">board</span> Competition record</p>
         <h1>Flags on the board.</h1>
         <p class="section-lede">
-          Seven competitions. Scroll the lane — each result lands as you move.
+          Seven competitions. One lane. Scroll — each result stacks in sequence.
         </p>
         <p class="wins-hero-meta">
           <span>7 entries</span>
@@ -80,150 +74,138 @@
       </div>
     </section>
 
-    <div class="wins-lane" id="winsLane">
+    <section class="wins-lane" id="winsLane" aria-label="Competition results">
+      <div class="shell wins-shell">
 
-      <article class="win" data-win="1" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">02</span>
-            <span class="win-place-label">National</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">Aug 2026</p>
+        <article class="win" data-win="1" data-reveal>
+          <div class="win-index" aria-hidden="true">01</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">Aug 2026</p>
+              <p class="win-place"><span>02</span> National · 9th overall</p>
+            </div>
             <h2>PerfectRoot CTF</h2>
-            <p class="win-result">9th overall · <strong>2nd in Kenya</strong></p>
-            <p>
+            <p class="win-result"><strong>2nd in Kenya</strong> · Rank 9 overall</p>
+            <p class="win-blurb">
               Back in the competitor seat for a high-skill PerfectRoot weekend —
               representing Multimedia University of Kenya on a board packed with
               international teams.
             </p>
             <p class="win-team">Team · MMU</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="win win--flip" data-win="2" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">02</span>
-            <span class="win-place-label">+ Writeup</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">27 Apr 2026</p>
+        <article class="win" data-win="2" data-reveal>
+          <div class="win-index" aria-hidden="true">02</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">27 Apr 2026</p>
+              <p class="win-place"><span>02</span> + Best writeup</p>
+            </div>
             <h2>Connected Africa Summit CTF</h2>
             <p class="win-result"><strong>2nd place</strong> · Best technical writeup</p>
-            <p>
+            <p class="win-blurb">
               cybersensei-EH cleared the board in 39 minutes — web tradecraft under
               pressure at the Connected Africa Summit, with Safetech Innovations and
               the ICT Authority in the room.
             </p>
             <p class="win-team">Team · cybersensei-EH</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="win" data-win="3" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">02</span>
-            <span class="win-place-label">Runners-up</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">13 Dec 2025</p>
+        <article class="win" data-win="3" data-reveal>
+          <div class="win-index" aria-hidden="true">03</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">13 Dec 2025</p>
+              <p class="win-place"><span>02</span> Runners-up</p>
+            </div>
             <h2>Kenya National CTF</h2>
             <p class="win-result"><strong>1st runners-up</strong></p>
-            <p>
+            <p class="win-blurb">
               Team sensei held the top for the opening stretch, then fought a
               three-hour closing duel. Web security carried the night — captain’s
               call, crew execution.
             </p>
             <p class="win-team">Team · sensei</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="win win--flip" data-win="4" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">02</span>
-            <span class="win-place-label">Kenya</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">Dec 2025</p>
+        <article class="win" data-win="4" data-reveal>
+          <div class="win-index" aria-hidden="true">04</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">Dec 2025</p>
+              <p class="win-place"><span>02</span> Kenya</p>
+            </div>
             <h2>CyberTalents CTF — Kenya</h2>
             <p class="win-result"><strong>Runners-up</strong></p>
-            <p>
+            <p class="win-blurb">
               A Kenya-focused CyberTalents weekend in a packed December calendar —
               another podium finish while the crew kept stacking reps across
               back-to-back contests.
             </p>
             <p class="win-team">Competition · Kenya</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="win" data-win="5" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">02</span>
-            <span class="win-place-label">Africa</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">Oct 2025</p>
+        <article class="win" data-win="5" data-reveal>
+          <div class="win-index" aria-hidden="true">05</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">Oct 2025</p>
+              <p class="win-place"><span>02</span> Africa</p>
+            </div>
             <h2>Cyberweek Africa CTF</h2>
             <p class="win-result"><strong>2nd place</strong></p>
-            <p>
+            <p class="win-blurb">
               Team sensei on the Cyberweek Africa board — CYBERPRO challenges at
               the Kenya School of Government. Regional pace, clean execution.
             </p>
             <p class="win-team">Team · sensei</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="win win--flip" data-win="6" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">04</span>
-            <span class="win-place-label">Inter-uni</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">4 Oct 2025</p>
+        <article class="win" data-win="6" data-reveal>
+          <div class="win-index" aria-hidden="true">06</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">4 Oct 2025</p>
+              <p class="win-place"><span>04</span> Inter-uni</p>
+            </div>
             <h2>I&amp;M Inter-University CTF</h2>
             <p class="win-result"><strong>4th place</strong></p>
-            <p>
+            <p class="win-blurb">
               On-site at I&amp;M Bank HQ — red and blue team pressure against
               Kenya’s top university squads. First run at the annual, already on
               the board.
             </p>
             <p class="win-team">Representing · Multimedia University</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="win" data-win="7" data-reveal>
-        <div class="shell win-inner">
-          <div class="win-place">
-            <span class="win-place-mark">02</span>
-            <span class="win-place-label">Runners-up</span>
-          </div>
-          <div class="win-copy">
-            <p class="win-when">Jun 2025</p>
+        <article class="win" data-win="7" data-reveal>
+          <div class="win-index" aria-hidden="true">07</div>
+          <div class="win-body">
+            <div class="win-head">
+              <p class="win-when">Jun 2025</p>
+              <p class="win-place"><span>02</span> Runners-up</p>
+            </div>
             <h2>Adili Group × Microsoft CTF</h2>
             <p class="win-result"><strong>1st runners-up</strong></p>
-            <p>
+            <p class="win-blurb">
               Live Capture the Flag with Adili Group and Microsoft — SQLi, XSS,
               RCE scenarios under the clock. Team United took the runners-up spot.
             </p>
             <p class="win-team">Team · United</p>
           </div>
-        </div>
-      </article>
+        </article>
 
-    </div>
+      </div>
+    </section>
 
     <section class="wins-close">
-      <div class="shell" data-reveal>
+      <div class="shell wins-shell" data-reveal>
         <p class="eyebrow"><span class="eyebrow-code">next</span> Still competing</p>
         <h2>The board stays open.</h2>
         <p class="section-lede">
@@ -258,6 +240,6 @@
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
-  <script src="js/script.js?v=wins-1"></script>
+  <script src="js/script.js?v=wins-2"></script>
 </body>
 </html>
