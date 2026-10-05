@@ -759,136 +759,114 @@ body {
   font-size: 0.95rem;
 }
 
-/* Featured engagement under services */
+/* Featured engagement under services — editorial strip, not a card */
 .work-proof {
-  margin-top: 2.75rem;
-  display: grid;
-  grid-template-columns: minmax(11rem, 0.78fr) 1.6fr;
-  gap: 1.75rem 2.5rem;
-  padding: 1.85rem 1.75rem 1.9rem;
-  border: 1px solid var(--line-strong);
-  background:
-    linear-gradient(135deg, rgba(37, 231, 234, 0.06) 0%, transparent 42%),
-    linear-gradient(180deg, rgba(16, 22, 31, 0.95), rgba(6, 8, 11, 0.72));
+  margin-top: 3.25rem;
+  padding-top: 2.1rem;
+  border-top: 1px solid var(--line);
   position: relative;
-  overflow: hidden;
+  max-width: 46rem;
 }
 
 .work-proof::before {
   content: "";
   position: absolute;
+  top: -1px;
   left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--cyan), rgba(37, 231, 234, 0.15));
+  width: 5.5rem;
+  height: 2px;
+  background: var(--cyan);
 }
 
-.work-proof-rail {
+.work-proof-top {
   display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  padding-left: 0.35rem;
-}
-
-.work-proof-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1.25rem;
+  margin-bottom: 1.15rem;
 }
 
 .work-proof-status {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: auto;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cyan-soft);
 }
 
 .work-proof-dot {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.42rem;
+  height: 0.42rem;
   border-radius: 50%;
   background: var(--cyan);
-  box-shadow: 0 0 12px var(--cyan-glow);
+  box-shadow: 0 0 10px var(--cyan-glow);
   flex-shrink: 0;
 }
 
-.work-proof-main {
-  min-width: 0;
-}
-
-.work-proof-client {
+.work-proof-kicker {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--faint);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
 }
 
-.work-proof-main h3 {
+.work-proof h3 {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  letter-spacing: 0.01em;
   line-height: 1.2;
-  margin-bottom: 0.9rem;
+  text-transform: none;
+  margin-bottom: 1rem;
   max-width: 22ch;
 }
 
-.work-proof-lede,
-.work-proof-outcome {
+.work-proof-body {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 40rem;
+}
+
+.work-proof-body p {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.02rem;
   line-height: 1.65;
-  max-width: 52ch;
 }
 
-.work-proof-lede a {
+.work-proof-body a {
   color: var(--cyan-soft);
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-  text-decoration-color: rgba(37, 231, 234, 0.35);
-  transition: color 0.2s, text-decoration-color 0.2s;
+  border-bottom: 1px solid rgba(37, 231, 234, 0.35);
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.work-proof-lede a:hover {
+.work-proof-body a:hover {
   color: var(--cyan);
-  text-decoration-color: var(--cyan);
+  border-bottom-color: var(--cyan);
 }
 
 .work-proof-outcome {
-  margin-top: 0.85rem;
-  color: var(--text);
-  border-left: 1px solid rgba(37, 231, 234, 0.35);
-  padding-left: 0.9rem;
+  color: var(--text) !important;
+  padding-left: 0.95rem;
+  border-left: 2px solid rgba(37, 231, 234, 0.55);
 }
 
-.work-proof-main .text-link {
-  display: inline-flex;
-  margin-top: 1.15rem;
+.work-proof > .text-link {
+  margin-top: 1.25rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   .work-proof {
-    grid-template-columns: 1fr;
-    gap: 1.15rem;
-    padding: 1.45rem 1.25rem 1.55rem;
+    margin-top: 2.5rem;
+    padding-top: 1.6rem;
   }
 
-  .work-proof-status {
-    margin-top: 0;
-  }
-
-  .work-proof-main h3 {
+  .work-proof h3 {
     max-width: none;
   }
 }
