@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Cyber Sensei</title>
+  <meta name="description" content="Page not found — Cyber Sensei.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=pages-1">
+</head>
+<body class="page-404">
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="hex-mesh"></div>
+    <div class="hex-mesh hex-mesh--soft"></div>
+    <span class="glow-blob glow-blob--cyan"></span>
+    <span class="glow-blob glow-blob--warm"></span>
+    <span class="hex-ring hex-ring--1"></span>
+    <span class="spark spark--1"></span>
+    <span class="spark spark--2"></span>
+  </div>
+
+  <header class="site-header is-scrolled" id="siteHeader">
+    <div class="shell header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo-mark.png" alt="" class="brand-mark" width="40" height="40">
+        <span class="brand-word">Cyber Sensei</span>
+      </a>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-solid">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="err-main">
+    <div class="shell err-panel">
+      <p class="eyebrow"><span class="eyebrow-code">404</span> Signal lost</p>
+      <p class="err-code" aria-hidden="true">404</p>
+      <h1>This path is not on the board.</h1>
+      <p class="section-lede">
+        The page you hit does not exist — or it moved when we split the site into
+        cleaner pages. Pick a live route below.
+      </p>
+      <pre class="err-term" aria-hidden="true">kali@cybersensei-eh:~$ find / -name "that-page"
+find: no match
+kali@cybersensei-eh:~$ cd ~ && ls</pre>
+      <div class="err-links">
+        <a href="index.html" class="btn btn-solid">← Home</a>
+        <a href="hacknights.html" class="btn btn-ghost">Hacknights</a>
+        <a href="wins.html" class="btn btn-ghost">Wins</a>
+        <a href="gallery.html" class="btn btn-ghost">Gallery</a>
+        <a href="index.html#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year") && (document.getElementById("year").textContent = String(new Date().getFullYear()));
+  </script>
+</body>
+</html>

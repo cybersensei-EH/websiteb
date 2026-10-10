@@ -2263,6 +2263,182 @@ body {
   margin-top: 1.75rem;
 }
 
+/* ---------- Inner pages ---------- */
+.page-hero {
+  padding: 8.25rem 0 2.25rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.5vw, 2.85rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  max-width: 18ch;
+  margin: 0.55rem 0 0.85rem;
+}
+
+.page-back {
+  padding: 1.5rem 0 4.5rem;
+}
+
+.page-back .shell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.page-inner .work,
+.page-inner .hacknights,
+.page-inner .sessions,
+.page-inner .writeups,
+.page-inner .youtube {
+  border-block: none;
+  padding-top: 1.25rem;
+}
+
+/* Home pathway grid */
+.pathways {
+  padding: 5.5rem 0;
+  border-block: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--ink-2), var(--ink));
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+
+.pathway {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.35rem 1.25rem 1.4rem;
+  border: 1px solid var(--line);
+  background: rgba(6, 8, 11, 0.5);
+  transition: border-color 0.25s, transform 0.25s var(--ease), background 0.25s;
+  min-height: 100%;
+}
+
+.pathway:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+  background: var(--ink-4);
+}
+
+.pathway-code {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--cyan);
+}
+
+.pathway h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.pathway p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.pathway-go {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  margin-top: 0.35rem;
+}
+
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-privacy {
+  margin-top: 0.65rem;
+  font-size: 0.78rem;
+  color: var(--faint);
+}
+
+.contact-form {
+  position: relative;
+}
+
+/* ---------- 404 ---------- */
+.page-404 .site-header {
+  background: rgba(6, 8, 11, 0.88);
+}
+
+.err-main {
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding: 7rem 0 4rem;
+}
+
+.err-panel {
+  max-width: 40rem;
+}
+
+.err-code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(5rem, 18vw, 8.5rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(37, 231, 234, 0.55);
+  margin: 0.4rem 0 0.75rem;
+}
+
+.err-panel h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.55rem, 3.2vw, 2.2rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.err-term {
+  margin: 1.35rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  background: #070a0e;
+  color: #9aaeb8;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.err-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+@media (max-width: 900px) {
+  .pathway-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pathway-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Wins page ---------- */
 .page-wins {
   overflow-x: clip;

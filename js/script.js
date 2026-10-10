@@ -54,12 +54,39 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
-  form?.addEventListener("submit", (event) => {
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (formNote) {
-      formNote.textContent = "Message noted — we will follow up soon.";
+    const submitBtn = document.getElementById("contactSubmit");
+    if (formNote) formNote.textContent = "Sending…";
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      const endpoint =
+        form.getAttribute("action") ||
+        "https://formsubmit.co/ajax/cybersenseieh@gmail.com";
+      const data = new FormData(form);
+      const res = await fetch(endpoint, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      const payload = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(payload.message || "Send failed");
+      }
+      if (formNote) {
+        formNote.textContent =
+          "Message sent — we will follow up soon. (First send may need a one-time confirm in cybersenseieh@gmail.com.)";
+      }
+      form.reset();
+    } catch (err) {
+      if (formNote) {
+        formNote.textContent =
+          "Could not send right now. Email us directly at cybersenseieh@gmail.com.";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
-    form.reset();
   });
 
   // Lite YouTube: thumbnail facade → iframe only on click
