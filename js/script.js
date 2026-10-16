@@ -76,7 +76,7 @@
       }
       if (formNote) {
         formNote.textContent =
-          "Message sent — we will follow up soon. (First send may need a one-time confirm in cybersenseieh@gmail.com.)";
+          "We have received your message. We shall be answering soon.";
       }
       form.reset();
     } catch (err) {
