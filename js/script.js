@@ -142,21 +142,21 @@
       { type: "cmd", text: "ffuf -u http://10.10.10.42/FUZZ -w wordlists/raft-small.txt -mc 200 -t 40" },
       {
         type: "out",
-        html: `<span class="kali-out--dim">:: Progress — [####################] 100%</span>
+        html: `<span class="kali-out--dim">:: Progress [####################] 100%</span>
 <span class="kali-out--ok">admin                  [Status: 200, Size: 2411]</span>
 <span class="kali-out--ok">api                    [Status: 200, Size: 88]</span>
 <span class="kali-out--ok">api/user?id=          [Status: 200, Size: 312]</span>
-<span class="kali-out--warn">:: hint — SSRF lab (Cyber Chief Circle energy)</span>`,
+<span class="kali-out--warn">:: hint: SSRF lab (Cyber Chief Circle energy)</span>`,
       },
       { type: "cmd", text: "curl -s 'http://10.10.10.42/api/fetch?url=file:///flag.txt'" },
       {
         type: "out",
         html: `<span class="kali-out--flag">CS{master_the_hack_until_sunrise}</span>`,
       },
-      { type: "cmd", text: "echo \"[+] flag bagged — posting dawn walkthrough\"" },
+      { type: "cmd", text: "echo \"[+] flag bagged. posting dawn walkthrough\"" },
       {
         type: "out",
-        html: `<span class="kali-out--ok">[+] flag bagged — posting dawn walkthrough</span>
+        html: `<span class="kali-out--ok">[+] flag bagged. posting dawn walkthrough</span>
 <span class="kali-out--info">→ youtube.com/@cybersensei-EH</span>
 <span class="kali-out--info">→ medium.com/@cybersenseieh</span>
 <span class="kali-out--dim">session locked · crew still in the room</span>`,
